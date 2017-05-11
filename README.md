@@ -1,3 +1,0 @@
-# PST
-
-Premier fichier
