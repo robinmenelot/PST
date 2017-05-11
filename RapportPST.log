@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  11 MAY 2017 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  11 MAY 2017 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,7 +491,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 51.
-[1
+File: logoINSA.eps Graphic file (type eps)
+<logoINSA.eps> [1
 
 ]
 Chapitre 1.
@@ -503,12 +504,12 @@ Chapitre 2.
 
 ] (./RapportPST.aux) ) 
 Here is how much of TeX's memory you used:
- 2690 strings out of 493015
- 34466 string characters out of 6133377
+ 2693 strings out of 493015
+ 34494 string characters out of 6133377
  99422 words of memory out of 5000000
- 6234 multiletter control sequences out of 15000+600000
+ 6235 multiletter control sequences out of 15000+600000
  12416 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,4n,30p,237b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,4n,30p,9857b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RapportPST.dvi (3 pages, 1352 bytes).
+Output written on RapportPST.dvi (3 pages, 1436 bytes).
