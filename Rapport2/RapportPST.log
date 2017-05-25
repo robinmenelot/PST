@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  25 MAY 2017 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  25 MAY 2017 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1107,60 +1107,36 @@ Underfull \hbox (badness 1231) in paragraph at lines 136--138
 
 File: acc.eps Graphic file (type eps)
 <acc.eps> [3]
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
-[]\T1/pplx/m/n/10 A sta-te-ment re-qui-ring ci-ta-tion
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
+
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
-\T1/pplx/m/n/10 [[]]. Lo-rem ip-sum
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 175--177
-\T1/pplx/m/n/10 Vi-va-mus nunc nunc, mo-les-tie ut, ul-tri-cies
- []
-
-
-Underfull \hbox (badness 3088) in paragraph at lines 175--177
-\T1/pplx/m/n/10 in sa-pien. Lo-rem ip-sum do-lor sit amet,
- []
-
-
-Underfull \hbox (badness 2181) in paragraph at lines 175--177
-\T1/pplx/m/n/10 consec-te-tuer adi-pis-cing elit. Duis frin-gilla
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 175--177
-\T1/pplx/m/n/10 Pel-len-tesque pla-ce-rat. Nam ru-trum augue
- []
-
-
-Underfull \hbox (badness 3536) in paragraph at lines 189--193
+File: cin.eps Graphic file (type eps)
+<cin.eps>
+Underfull \hbox (badness 3536) in paragraph at lines 207--211
 []\T1/pplx/m/n/10 Figueredo, A. J.
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
 [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./RapportPST.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 216.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `RapportPST.out' has not changed.
-(rerunfilecheck)             Checksum: 983AE1686CF2F77EECDB6B88EE369126;995.
+(rerunfilecheck)             Checksum: A5D5127EFA939AA5A598DF56ED13FDA6;1064.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 13849 strings out of 493015
- 207785 string characters out of 6133377
+ 13852 strings out of 493015
+ 207820 string characters out of 6133377
  362443 words of memory out of 5000000
- 17193 multiletter control sequences out of 15000+600000
+ 17195 multiletter control sequences out of 15000+600000
  43379 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,43p,125786b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,43p,153362b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RapportPST.dvi (4 pages, 26236 bytes).
+Output written on RapportPST.dvi (4 pages, 24956 bytes).

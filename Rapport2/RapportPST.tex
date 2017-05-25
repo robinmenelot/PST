@@ -147,13 +147,12 @@ En utilisant les capteurs du RasPi et les libraries XLoBorg, on pu simplement ex
 \caption{Schema qui reprérente le repère galiléen, le repère du RasPi et l'accélration terreste.}
 \end{figure}
 \end{center}
-Lorsque le RasPi est à plat les valeurs retournées sont $\icol{0\\0\\1}$ car c'est la projection de $\vec{g}$ sur le repère du RasPi. Maintenant, si on incline le RasPi d'un angle $\theta$, les projections deviennent :
+Lorsque le RasPi est à plat les valeurs retournées sont $\icol{0\\0\\1}$ car c'est la projection de $\vec{g}$ sur le repère du RasPi. Maintenant, si on incline le RasPi d'un angle $\theta$ selon $x_0$, les projections deviennent :
 \begin{center}
-$\icol{x\\y\\z} \cdot \vec{g} =$
-\systeme*{0, \sin{\theta},  \cos{\theta} } \\
+$\icol{x\\y\\z} \cdot \vec{g} =$ \systeme*{ 0 , - g \sin{\theta},  - g \cos{\theta} } \\
 \end{center}
 \indent On peut donc voir que la direction dans laquelle l'accélération est nulle, est l'axe de rotation du RasPi. Tout ceci est bien joli, mais ne fonctionnent que pour les axes $x$ et $y$ car il est impossible d'exploiter $\vec{g}$ afin d'avoir  $\vec{z} \cdot \vec{g} = 0$ et des valeurs non nulles dans les deux autres directions. Ceci veut dire qu'on a seulement deux degrés de liberté, donc qu'on ne peut controler que deux moteurs indépendement. \\
-\indent On a pensé à une solution afin de contourner le problème, mais elle semblait au-dessus de nos compétences. Il s'agit d'établir un changement de base du repère associé au RasPi pour le transformé en "pyramide inversé", cela aura la conséquence de parvenir à des projection de $\vec{g}$ non nulles dans toutes les directions. 
+\indent On a pensé à une solution afin de contourner le problème, mais elle semblait au-dessus de nos compétences. Il s'agit d'établir un changement de base du repère associé au RasPi pour le transformé en "pyramide inversé", cela aurais la conséquence de parvenir à des projection de $\vec{g}$ non nulles dans toutes les directions. 
 
 \subsubsection{Getch}
 \textsc{getch} nous a servis à la lecture en continu des touches du clavier. Pour controler le robot à l'aide des flèches du clavier on devait mettre en place un système de \textsc{Key Listener} non-bloquant et continu. Les libraries Getch on remplis cette fonction.
@@ -165,19 +164,38 @@ Les lignes de codes présente sur la brique Lego sont majoritairement des instru
 mB.run_timed(time_sp=600, 
 speed_sp=600)
 \end{lstlisting}
-Ici cette ligne de code ordonne au moteur B de tourner pendant 600 ms à puissance 600 (échelle de puissance : [0 , 1400].
+Ici cette ligne de code ordonne au moteur B de tourner pendant 600 ms à vitesse 600 (échelle de puissance : [0 , 1400]).
 
 %------------------------------------------------
 
 \section{Mécanique}
+%A statement requiring citation \cite{Figueredo:2009dg}.
 
+Intro chapitre mécanique \\
+construciton par essai et echec \\
+bricolage \\
+on a fait ça comme mais ça aurais pu être différent \\
+introduire les legos 
 
-A statement requiring citation \cite{Figueredo:2009dg}.
-\blindtext % Dummy text
 \subsection{Cinématique du bras}
-\subsection{Construction}
+plagia sur bras de pellteuse \\
+on avait que 3 moteurs \\
+image de scheme cinématique +commentaire \\
 
-\blindtext % Dummy text
+\begin{center}
+\includegraphics[scale = 0.3]{cin.eps}
+\begin{figure}[!h]
+\caption{Schema cinématique du bras robotique.}
+\end{figure}
+\end{center}
+
+\subsection{Construction}
+parler vite fait des lego \\
+parler des problème : elastique + vis sans fin (avec photo de la vis)
+
+\subsubsection{Prototype}
+finir par photo du prototype final
+et parler de ce qu'on a réussi à faire concretement
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
