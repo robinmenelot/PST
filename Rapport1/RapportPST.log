@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  11 MAY 2017 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.1.31)  25 MAY 2017 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,14 +471,14 @@ LaTeX Font Info:    ... okay on input line 17.
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
+* \@twocolumntrue
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -494,13 +494,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: logoINSA.eps Graphic file (type eps)
 <logoINSA.eps> [1
 
+
 ]
 Chapitre 1.
 [1
 
+
+
 ]
 Chapitre 2.
 [2
+
 
 ] (./RapportPST.aux) ) 
 Here is how much of TeX's memory you used:
@@ -512,4 +516,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  28i,4n,30p,9857b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RapportPST.dvi (3 pages, 1436 bytes).
+Output written on RapportPST.dvi (3 pages, 1504 bytes).
