@@ -1,6 +1,15 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Methods}{}% 2
-\BOOKMARK [1][-]{section.3}{Results}{}% 3
-\BOOKMARK [1][-]{section.4}{Discussion}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Subsection One}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Subsection Two}{section.4}% 6
+\BOOKMARK [2][-]{subsection.1.1}{Cahier des charges}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Programmation}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Architecture}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Composants du syst\350me}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Interactions des parties}{subsection.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Code}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Terminal Linux et SSH}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Socket}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Capteurs pi\351zo\351lectrique}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Getch}{subsection.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Library EV3}{subsection.2.2}% 12
+\BOOKMARK [1][-]{section.3}{M\351canique}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Cin\351matique du bras}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Construction}{section.3}% 15
