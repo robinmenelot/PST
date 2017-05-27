@@ -19,6 +19,7 @@
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{hyperref}
 
 \newcommand{\icol}[1]{% inline column vector
   \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
@@ -107,10 +108,10 @@ Voici les instructions que nous avions avant de commencer notre projet : \\
 %------------------------------------------------
 
 \section{Programmation}
-Contrairement à ce qu’il peut paraître, la grosse majorité de notre projet était en réalité de la programmation. Entre l’apprentissage des différents outils, la familiarisation du nouvel environnement informatique et l’écriture du code, notre temps de travail s’est concentré sur la partie numérique du projet. En revanche, les choix d’outils liées à notre projet se sont révélés être largement utilisés à travers le monde, et donc on avait accès à de nombreuses aides et ressources sur internet.
+Contrairement à ce qu’il peut paraître, la grosse majorité de notre projet était en réalité de la programmation. Entre l’apprentissage des différents outils, la familiarisation du nouvel environnement informatique et l’écriture du code, notre temps de travail s’est concentré sur la partie numérique du projet. Les choix d’outils liées à notre projet se sont révélés être largement utilisés à travers le monde, et donc on avait accès à de nombreuses aides et ressources sur internet.
 \subsection{Architecture}
 \subsubsection{Composants du système}
-Notre système se compose en quatres parties plus ou moins indépendantes : l’ordinateur, le Raspberry Pi, la brique Lego, les moteurs. Chaques composants joue un rôle particulier et déterminant dans le système. Ils nous étaient imposé d’utiliser chaque composants. \\
+Notre système se compose en quatres parties plus ou moins indépendantes : l’ordinateur, le Raspberry Pi, la brique Lego, les moteurs. Chaques composants joue un rôle particulier et déterminant dans le système. Il nous était imposé d’utiliser chaque composants. \\
 \indent \textsc{L'ordinateur} était un élément principal lors de notre travail, en effet, celui-ci nous permettait d’écrire nos programmes, écrire les programmes sur les autres composants via une connection SSH, faire nos recherche et piloter notre bras robotique. On a fait le choix d’utiliser Linux, de naviguer dans nos fichiers et d’écrire nos programmes grâce au Terminal et à l’éditeur de texte Vim. \\
 \indent \textsc{Le Raspberry Pi} \footnote{On le référencera par 'RasPi' dans la suite du rapport}, est une carte électronique (de la taille d’une grosse carte bleu), qui se comporte comme un ordinateur. Dotée de port HDMI, USB, d’un émetteur/receveur WIFI, d’un accéléromètre piézoélectrique et bien d’autre encore, nous a servi comme serveur et de relais entre les autres composants, en plus d’être une manette tridimensionnelle pour notre robot. \\ 
 \indent \textsc{La brique Lego}, est le relais entre les informations numériques et les sorties mécaniques des moteurs. La briques à pour rôle de convertir les instructions codées en mouvement physique des moteurs constituants notre robot.
@@ -124,9 +125,9 @@ Afin de transformer chaque composant indépendant en un système entier il faut 
 \end{figure}
 \end{center}	
 \vspace{-1cm}
-\paragraph{} \indent La figure 1 synthétise le fonctionnement des communications entre nos différents composants. On peut voir que le RasPi est un élèment central au protocol, agissant en tant que serveur il devient le relais de chaque transit d'information. On remarque aussi que toutes connections représentées sur le diagramme sont dans la réalité des communications wifi hébergé par un serveur local, sauf la brique, qui est connectée aux moteurs par des cables. Notre sytèmes présente deux fonctionalités avec deux protocoles légèrement différents. \\
-\indent La première, comme indiquée dans le cahiers des charges, une télécomande tridimensionnelle qui pilote les différents moteurs en fonction de ses déplacements dans l'escapce (façon manette de Wii). Ce protocol ne requiert par l'ordinateur; un \textsc{thread} de communication python est ouvert entre le RasPi et la brique, on récupère les accélérations des capteurs piézoélectriques du RasPi avant des les analyser et les envoyer à la brique par wifi. Le fonctionement du système sera expliqué plus loin dans le rapport. \\ 
-\indent La seconde, un désir de notre part (notamment à cause de la faible précision de la prmière façon de fonctionner), était de pouvoir controler les moteurs grâce au clavier de l'ordinateur. On a simplement rajouté un client à la communication, le RasPi communique donc avec deux clients simultanement. Ici, prends toutes sont importance d'établir un protocole de communication rigoureu afin d'établir les règles et l'ordre des informations échangées entre les composants.
+\paragraph{} \indent La figure 1 synthétise le fonctionnement des communications entre nos différents composants. On peut voir que le RasPi est un élèment central au protocol, agissant en tant que serveur il devient le relais de chaque transit d'information. On remarque aussi que toutes connections représentées sur le diagramme sont dans la réalité des communications wifi locales, sauf la brique, qui est connectée aux moteurs par des cables élèctroniques. Notre sytème présente deux fonctionalités avec deux protocoles légèrement différents. \\
+\indent La première, comme indiquée dans le cahiers des charges, une télécomande tridimensionnelle qui pilote les différents moteurs en fonction de ses déplacements dans l'espace (façon manette de Wii). Ce protocole ne requiert par l'ordinateur; un \textsc{thread} de communication python est ouvert entre le RasPi et la brique, on récupère les accélérations des capteurs piézoélectriques du RasPi avant des les analyser et les envoyer à la brique par wifi. Le fonctionement du système sera expliqué plus loin dans le rapport. \\ 
+\indent La seconde, un désir de notre part (notamment à cause de la faible précision de la prmière façon de fonctionner), était de pouvoir controler les moteurs grâce au clavier de l'ordinateur. On a simplement rajouté l'ordinateur à la communication, le RasPi communique donc avec deux clients simultanement. Il est d'autant plus important d'établir un protocole de communication rigoureu afin d'établir les règles et l'ordre des informations échangées entre les composants.
 
 %------------------------------------------------
 
@@ -147,7 +148,7 @@ En utilisant les capteurs du RasPi et les libraries XLoBorg, on pu simplement ex
 \caption{Schema qui reprérente le repère galiléen, le repère du RasPi et l'accélration terreste.}
 \end{figure}
 \end{center}
-Lorsque le RasPi est à plat les valeurs retournées sont $\icol{0\\0\\1}$ car c'est la projection de $\vec{g}$ sur le repère du RasPi. Maintenant, si on incline le RasPi d'un angle $\theta$ selon $x_0$, les projections deviennent :
+Lorsque le RasPi est à plat les valeurs retournées sont $\icol{0\\0\\-1}$ car c'est la projection de $\vec{g}$ sur le repère du RasPi. Maintenant, si on incline le RasPi d'un angle $\theta$ selon $x_0$, les projections deviennent :
 \begin{center}
 $\icol{x\\y\\z} \cdot \vec{g} =$ \systeme*{ 0 , - g \sin{\theta},  - g \cos{\theta} } \\
 \end{center}
@@ -203,14 +204,86 @@ et parler de ce qu'on a réussi à faire concretement
 
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
+\bibitem{ev3pythonlibrary}
+EV3 PYTHON. Learn EV3 Python [en ligne]. Disponible sur : \\\url{https://sites.google.com/site/ev3python/} (22/03/17)
+
+\bibitem{xloborg}
+PiBorg. Robotics add on boards for use with your Raspberry Pi [en ligne]. Disponible sur : \\
+\url{https://www.piborg.org/xloborg} (19/05/17)
  
+ \bibitem{pstBiboulet}
+ N. Biboulet. Démarage PST Lego [PDF] 2017. 7 pages.
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
+\newpage
+\section{Annexes}
+\subsection{Programmes sur ordinateur}
+\subsubsection{clientPCv1.py}
+\begin{lstlisting}
+import socket
+import time
+from Getch import Getch,whatKeyIsPressed
+
+if __name__ == '__main__':
+	
+	s = socket.socket()
+	host = '192.168.42.1'
+	port = 8087
+	s.connect((host,port))
+	
+	while True:
+		time.sleep(0.1)
+		key = whatKeyIsPressed()
+		s.send(key.encode())
+		print(key)
+		if key == 'q':
+			s.close()
+			break
+}
+\end{lstlisting}
+
+\subsubsection{Getch.py}
+
+\begin{lstlisting}
+class Getch:
+	def __init__(self):
+		import tty, sys
+
+	def __call__(self):
+		import sys, tty, termios
+		fd = sys.stdin.fileno()
+		old_settings = termios.tcgetattr(fd)
+		try:
+			tty.setraw(sys.stdin.fileno())
+			ch = sys.stdin.read(1)
+		finally:
+			termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+		return ch
+
+def whatKeyIsPressed () :
+	while True:
+		init = Getch()()
+		if init == 'q':
+			return 'q'
+			break
+		if init == 'z':
+			return 'z'
+		if init == 's':
+			return 's'
+		elif init == '\033':
+			Getch()()
+			key = Getch()()
+			if key=='A':
+				return 'up'
+			if key=='B':
+				return 'down'
+			if key=='C':
+				return 'right'
+			if key=='D':
+				return 'left'
+\end{lstlisting}
+
+
 
 \end{document}
