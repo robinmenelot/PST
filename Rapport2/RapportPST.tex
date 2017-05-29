@@ -172,16 +172,14 @@ Ici cette ligne de code ordonne au moteur B de tourner pendant 600 ms à vitesse
 \section{Mécanique}
 %A statement requiring citation \cite{Figueredo:2009dg}.
 
-Intro chapitre mécanique \\
-construciton par essai et echec \\
-bricolage \\
-on a fait ça comme mais ça aurais pu être différent \\
-introduire les legos 
+L’objectif était de construire le système qui allait produire les mouvements d’un bras de pelleteuse. Le tout en utilisant le kit de lego EV3. Nous avons tout simplement bricolé avec ce que nous avions comme outil à disposition. Nous avons essayé plusieurs solutions et nous avons faits les ajustements nécessaire. Le kit nous donne cette liberté de construire/déconstruire très rapidement et donc de ne pas avoir peur de tester plusieurs solutions. 
 
 \subsection{Cinématique du bras}
-plagia sur bras de pellteuse \\
-on avait que 3 moteurs \\
-image de scheme cinématique +commentaire \\
+
+Nous avons réalisé un schéma cinématique pour pouvoir observer les mouvements que l’on souhaitait obtenir. Nous avions quelques contraintes à prendre en compte.Les pelleteuse utilisent des vérins et nous n’en avions pas à disposition.
+Et nous n’avions que 3 moteurs pour tout réaliser.
+Nous nous sommes donc tournés vers une solution où chaque moteur gère la rotation de chaque segment. Tout simplement.
+Le bâti en noir représente donc la base qui est fixée sur la base de la pelleteuse, ce qui est le projet de l'autre groupe.
 
 \begin{center}
 \includegraphics[scale = 0.3]{cin.eps}
@@ -191,12 +189,21 @@ image de scheme cinématique +commentaire \\
 \end{center}
 
 \subsection{Construction}
-parler vite fait des lego \\
-parler des problème : elastique + vis sans fin (avec photo de la vis)
+Nous avons commencé par construire cette base pouvant se fixer ultérieurement sur le projet de l’autre groupe. 
+Dans un second temps nous avons assemblé chaque moteur avec les différents segments. 
+Par séance nous avons expérimenté plusieurs dizaines d’arrangement différent. Mais ce ne sont que des détails et pas des changements majeurs.
+Nous avons rencontré deux difficultés principales :
+
+La première était de fixer le moteur gérant la rotation horizontale. 
+Il n’était pas possible de le fixer tout simplement en dessous (problème de taille) ni au dessus car il gênerait la rotation de l’engin. L’endroit où nous l’avons installé fait que l’axe du moteur n’était donc pas colinéaire à l’axe de rotation de l’engrenage du moteur bleu. Donc nous avons utilisé une vis sans fin pour transmettre le couple à un système d’engrenage. Il a fallut rajouter quelques pièces pour bien maintenir en place la vis sans fin. 
+
+Le second problème était que le moteur reliant la partie bleu et verte. n’arrivait pas à soutenir son poids dans une certaine position. Il a donc fallu imaginer une solution pour le soulager d’une partie du poids du reste de la structure.
+Pour cela nous avons pris un élastique. (Mettre photo élastique)
 
 \subsubsection{Prototype}
 finir par photo du prototype final
-et parler de ce qu'on a réussi à faire concretement
+
+Pour conclure le prototype répond au cahier des charges dans le sens où il est capable de réaliser tous les mouvements demandés.
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
