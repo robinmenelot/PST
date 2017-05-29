@@ -3,7 +3,7 @@
 \BOOKMARK [1][-]{section.2}{Programmation}{}% 3
 \BOOKMARK [2][-]{subsection.2.1}{Architecture}{section.2}% 4
 \BOOKMARK [3][-]{subsubsection.2.1.1}{Composants du syst\350me}{subsection.2.1}% 5
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Interactions des parties}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Interaction des parties}{subsection.2.1}% 6
 \BOOKMARK [2][-]{subsection.2.2}{Code}{section.2}% 7
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Terminal Linux et SSH}{subsection.2.2}% 8
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Socket}{subsection.2.2}% 9
